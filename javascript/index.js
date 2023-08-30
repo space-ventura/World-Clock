@@ -14,6 +14,13 @@ parisDateElement.innerHTML = moment().format("MMM Do YYYY");
 parisTime = moment().tz("Europe/Paris");
 parisTimeElement.innerHTML = parisTime.format("h:mm:ss[<small>]A[</small>]");
 
+let tokyoElement = document.querySelector("#tokyo");
+let tokyoDateElement = tokyoElement.querySelector(".date");
+let tokyoTimeElement = tokyoElement.querySelector(".time");
+tokyoDateElement.innerHTML = moment().format("MMM Do YYYY");
+tokyoTime = moment().tz("Asia/Tokyo");
+tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss[<small>]A[</small>]");
+
 }
 updateTime();
 setInterval(updateTime, 1000);
